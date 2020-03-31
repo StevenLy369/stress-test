@@ -22,5 +22,16 @@ $(document).ready(function(){
       dealingStress.push(stressScore);
     });
       console.log("--->" + dealingStress.length);
+
+      if(emotionalSigns.length >= 4 && pressureSigns.length >=4 ){
+         $("#stress-response").show();
+         
+      }
+      else if(emotionalSigns.length <=3  && dealingStress.length <=3 ){
+        $("#okay-response").show(); 
+      }
+      else{
+        $("#good-response").show();
+      }
    });
 });
